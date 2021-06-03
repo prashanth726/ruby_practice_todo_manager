@@ -79,7 +79,7 @@ body{
   height: 16px;
   margin-right: 6px;
 }
-.TodoItem-overdueLabel{
+.TodoItem-duedateLabel{
   margin-left: 10px;
   color: #e63636;
   font-size: 12px;
