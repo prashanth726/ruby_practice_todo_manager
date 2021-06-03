@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     render plain: "Created new user success"
   end
 
-  def show
+  def login
     email = params[:email]
     password = params[:password]
     user = User.find_by(email: email, password: password)
