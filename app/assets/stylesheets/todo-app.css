@@ -95,3 +95,6 @@ body{
 .TodoItem-Container:hover .TodoItem-delete{
   visibility: visible;
 }
+.TodoItem-textDecoration{
+  text-decoration: line-through;
+}
