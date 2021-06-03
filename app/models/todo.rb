@@ -17,12 +17,6 @@ class Todo < ActiveRecord::Base
     where("due_date > ?", Date.today)
   end
 
-  def self.mark_as_complete!(todo_id)
-    todo = find_by(id: todo_id)
-    todo.update(completed: true)
-    todo
-  end
-
   def self.completed
     all.where(completed:true)
   end
