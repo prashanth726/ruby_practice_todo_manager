@@ -8,17 +8,17 @@
         <li class="TodoItem">
           <label class="TodoItem-Container">
             <%= form_with(url: "/todos/#{todo.id}", method: "put") do %>
-            <%= check_box_tag(:completed,:completed,todo.completed,class: "TodoItem-Checkbox" ,onclick: "this.form.submit()")%>
+            <%= check_box_tag(:completed,:completed,todo.completed,class: "TodoItem-Checkbox",onclick: "this.form.submit()")%>
             <% end %>
             <p class="<%= todo.completed ? 'TodoItem-textDecoration' : nil %>">
             <%= todo.todo_text %>
             </p>
-           <% if show_due_date %>
+            <% if show_due_date %>
             <p class="TodoItem-duedateLabel"><%= todo.due_date.to_s(:short) %></p>
-           <% end %>
-              <%= form_with(url: "/todos/#{todo.id}", method: "delete") do %>
-              <%= image_submit_tag("/trashcan.png",alt: "delete",class:"TodoItem-delete") %>
-              <% end %>
+            <% end %>
+            <%= form_with(url: "/todos/#{todo.id}", method: "delete") do %>
+            <%= image_submit_tag("/trashcan.png",alt: "delete",class:"TodoItem-delete") %>
+            <% end %>
           </label>
         </li>
       <% end %>
